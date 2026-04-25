@@ -25,6 +25,39 @@ npm-debug.log*
 scratch/
 drafts-local/
 
+# Slide-tool intermediates (commit source, ignore derived output)
+.reveal-md/
+_site/
+dist/
+build/
+
+# Office / Keynote lock files and autosaves
+~$*.pptx
+~$*.key
+*.pptx~
+*.key~
+
+# LaTeX / Beamer build artifacts
+*.aux
+*.log
+*.toc
+*.nav
+*.snm
+*.out
+*.synctex.gz
+
+# Rehearsal recordings
+*.wav
+*.m4a
+*.aif
+*.aiff
+
 # Large media exports (keep source decks, skip derived exports)
 *.mp4
 *.mov
+
+# PDF policy: exports are derived, so ignore them under deck/ and
+# outline/. If a publishable PDF deliverable is produced for a venue,
+# add it under post-event/ where it is not blanket-ignored.
+deck/*.pdf
+outline/*.pdf

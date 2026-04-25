@@ -51,6 +51,19 @@ Expected additions as the talk is built out:
 - `speaker-notes/` — speaker notes tuned for the SREday audience and timebox
 - `post-event/` — recording link, slides-as-delivered, audience feedback
 
+## Asset Policy
+
+- **Deck source is committed; PDF exports are derived and not committed.**
+  Exports are regenerated from source on every build, so they only
+  pollute diffs. `.gitignore` ignores `deck/*.pdf` and `outline/*.pdf`.
+- **Publishable PDFs** (e.g. a slides-as-delivered handout) belong in
+  `post-event/`, which is not blanket-ignored.
+- **Rehearsal recordings** (`*.wav`, `*.m4a`, etc.) are gitignored —
+  they are local-only artifacts and not appropriate for a public repo.
+- **Session transcripts with real credentials, unredacted customer
+  data, or private financial info** belong in the private analysis
+  repo (`events/claude-deleted-my-cluster-2026`), never here.
+
 ## Event Details
 
 - **Event:** SREday (Texas / Austin edition)
