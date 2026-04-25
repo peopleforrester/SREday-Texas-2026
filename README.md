@@ -35,15 +35,21 @@ only the SREday-specific deliverables.
 
 ## Repository Layout
 
-The scaffold is intentionally light. Directories are created as content
-lands — no empty placeholders.
+What currently exists. The scaffold is intentionally light — directories
+are created as content lands, not as empty placeholders.
 
 - `README.md` — this file
 - `CLAUDE.md` — project-specific instructions for Claude Code sessions
 - `MEMORY.md` — session memory index
 - `PROJECT_STATE.md` — durable state for `/continue` across sessions
+- `pyproject.toml`, `uv.lock` — Python project config (used by the test suite)
+- `docs/` — plans and supporting documents for repo work
+- `tests/` — consistency suite asserting durable-state files match reality
 
-Expected additions as the talk is built out:
+## Roadmap
+
+Directories planned but not yet created. They will appear here as
+content for them is produced.
 
 - `abstract/` — as-submitted abstract, bio, session metadata
 - `outline/` — SREday-tuned outline and timebox plan
