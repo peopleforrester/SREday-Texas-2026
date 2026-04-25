@@ -3,6 +3,15 @@
 Durable session notes for this repo. Survives `/clear` and compaction.
 For global user-level memory, see `~/.claude/projects/*/memory/`.
 
+## Canonical references
+
+- **GitHub remote:** `git@github.com:peopleforrester/SREday-Texas-2026.git`
+  (web: <https://github.com/peopleforrester/SREday-Texas-2026>).
+  Note: `gh auth status` displays the account as `michaelrishiforrester`,
+  but the actual login (and the only valid `gh repo create` namespace) is
+  `peopleforrester`. Verify with `git remote get-url origin` rather than
+  trusting any stored summary.
+
 ## Current work-in-progress
 
 Repo initialization only. No talk content has been written yet —

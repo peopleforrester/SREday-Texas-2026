@@ -20,7 +20,7 @@ substance in `claude-deleted-my-cluster-2026`.
 - [x] Write MEMORY.md and PROJECT_STATE.md (state persistence)
 - [x] Write .gitignore
 - [x] Commit scaffold to `staging`
-- [x] Create public GitHub repo `michaelrishiforrester/SREday-Texas-2026`
+- [x] Create public GitHub repo `peopleforrester/SREday-Texas-2026`
 - [x] Push `staging`, then fast-forward `main` and push
 - [ ] Populate `abstract/` with as-submitted SREday abstract and bio
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
