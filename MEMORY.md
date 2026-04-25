@@ -29,13 +29,28 @@ outline, deck, and speaker notes are all TBD.
 - **Structure:** flat at the root for now. Directories (`abstract/`,
   `outline/`, `deck/`, etc.) are created when there is content to put
   in them — no empty placeholders with `.gitkeep`.
+- **License:** CC BY 4.0 for talk content (prose, slides, speaker
+  notes). Standard for public talk repos; permits reuse with
+  attribution.
+- **PDF policy:** deck source is committed; PDF exports are derived
+  and gitignored under `deck/` and `outline/`. Publishable PDFs (e.g.
+  slides-as-delivered) belong in `post-event/`, which is not
+  blanket-ignored.
+- **Test framework:** pytest, resolved by uv. Suite is a *consistency
+  suite* — it asserts durable-state files match the actual repo and
+  remote. Plan and rationale: `docs/senior-review-fixes.md`.
 
 ## Where we left off
 
-Initial scaffold committed to `staging` and pushed. GitHub repo
-created as public. `main` fast-forwarded from `staging` and pushed.
-Next step is to populate `abstract/` with the as-submitted SREday
-abstract and bio once Michael provides them.
+Senior-review fixes applied on `staging` via TDD: state-drift fixed,
+"Next step" rewritten with explicit priority, `.gitignore` extended
+for deck/talk assets, README layout split into Layout/Roadmap, LICENSE
+added (CC BY 4.0). Pytest suite green (25 tests). Pending the FF
+merge of `staging` into `main` and the corresponding push.
+
+Once that lands, the next blocking input from Michael is the submitted
+abstract and bio text (primary), followed by event date and timebox
+(secondary). See `PROJECT_STATE.md` "Next step".
 
 ## What is verified vs. asserted
 
@@ -51,3 +66,8 @@ Initialization was done manually by Claude Code via the shell tools
 (git, gh) and Write. No browser automation. No session JSONL was
 copied from the analysis repo — that stays siloed until Michael
 decides which excerpts (if any) should be published with the deck.
+
+Senior-review fixes were applied via TDD: a pytest consistency suite
+was wired up first, failing tests were committed to record the red
+state, then each fix was driven to green one phase at a time with a
+commit per phase. Plan in `docs/senior-review-fixes.md`.
