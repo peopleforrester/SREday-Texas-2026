@@ -42,6 +42,7 @@ are created as content lands, not as empty placeholders.
 - `CLAUDE.md` — project-specific instructions for Claude Code sessions
 - `MEMORY.md` — session memory index
 - `PROJECT_STATE.md` — durable state for `/continue` across sessions
+- `LICENSE` — license terms (CC BY 4.0)
 - `pyproject.toml`, `uv.lock` — Python project config (used by the test suite)
 - `docs/` — plans and supporting documents for repo work
 - `tests/` — consistency suite asserting durable-state files match reality
@@ -76,6 +77,12 @@ content for them is produced.
 - **Year:** 2026
 - **Status:** Accepted
 - **Date, timebox, and room:** _TBD — fill in once the schedule drops_
+
+## License
+
+Talk content (abstract, slides, speaker notes, and prose in this
+repository) is licensed under [CC BY 4.0](LICENSE). Reuse with
+attribution.
 
 ## Author
 
