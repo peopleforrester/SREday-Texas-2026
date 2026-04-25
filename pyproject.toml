@@ -1,0 +1,15 @@
+[project]
+name = "sreday-texas-2026"
+version = "0.0.0"
+description = "Venue-specific materials for the SREday Austin / Texas 2026 talk"
+requires-python = ">=3.11"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
