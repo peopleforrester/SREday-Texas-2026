@@ -37,9 +37,16 @@ and both branches pushed to the new public GitHub repo.
 
 ## Next step
 
-Ask Michael for the SREday-submitted abstract and bio text, then
-create `abstract/abstract.md` and `abstract/bio.md`. Also ask for the
-event date and timebox so the README placeholders can be filled in.
+Two inputs from Michael are blocking further work; chase them in this
+order.
+
+1. **Primary — submitted abstract and bio text.** This blocks talk
+   content. Once received, create `abstract/abstract.md` and
+   `abstract/bio.md` and lift the paraphrased summary out of the README.
+2. **Secondary — event date, timebox, and room.** This blocks only the
+   README placeholders and any timing-dependent outline decisions.
+   When SREday publishes the schedule, fill in the README "Event
+   Details" section.
 
 ## Branch and test status
 
