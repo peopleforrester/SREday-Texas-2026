@@ -39,18 +39,26 @@ outline, deck, and speaker notes are all TBD.
 - **Test framework:** pytest, resolved by uv. Suite is a *consistency
   suite* — it asserts durable-state files match the actual repo and
   remote. Plan and rationale: `docs/senior-review-fixes.md`.
+- **Organizers-only speaker notes:** the submission form's "visible
+  to organizers only" section is captured locally at
+  `abstract/speaker-notes-organizers.md` but gitignored. The content
+  is not sensitive, but the original framing was private, so the
+  conservative default is no-publish. To publish, remove the entry
+  from `.gitignore` deliberately.
 
 ## Where we left off
 
-Senior-review fixes applied on `staging` via TDD: state-drift fixed,
-"Next step" rewritten with explicit priority, `.gitignore` extended
-for deck/talk assets, README layout split into Layout/Roadmap, LICENSE
-added (CC BY 4.0). Pytest suite green (25 tests). Pending the FF
-merge of `staging` into `main` and the corresponding push.
+As-submitted SREday abstract and bio captured under `abstract/`.
+README replaced its paraphrased Talk Summary with a short intro plus
+a link to `abstract/abstract.md` (canonical). Organizers-only speaker
+notes from the submission form captured locally as
+`abstract/speaker-notes-organizers.md` but gitignored — the form
+labelled them "visible to organizers only" so they stay out of the
+public repo. Pytest suite green (29 tests).
 
-Once that lands, the next blocking input from Michael is the submitted
-abstract and bio text (primary), followed by event date and timebox
-(secondary). See `PROJECT_STATE.md` "Next step".
+Next blocking input is the event date, timebox, and room (was
+secondary, now primary). The outline draft can begin once the
+timebox is known. See `PROJECT_STATE.md` "Next step".
 
 ## What is verified vs. asserted
 

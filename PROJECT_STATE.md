@@ -24,7 +24,8 @@ substance in `claude-deleted-my-cluster-2026`.
 - [x] Push `staging`, then fast-forward `main` and push
 - [x] Apply senior-review fixes per `docs/senior-review-fixes.md`
       (items #1, #2, #3, #4, #6 — see "Senior-review fixes" below)
-- [ ] Populate `abstract/` with as-submitted SREday abstract and bio
+- [x] Populate `abstract/` with as-submitted SREday abstract and bio
+      (organizers-only speaker notes captured locally, gitignored)
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
       reversibility, operational controls)
 - [ ] Import / adapt deck from `claude-deleted-my-cluster-2026` into
@@ -65,21 +66,25 @@ Deferred items (with reasons in `docs/senior-review-fixes.md`):
 
 ## Last completed step
 
-Senior-review fixes applied on `staging` via TDD. Pytest consistency
-suite is green (25 tests). Ready to FF `main` from `staging` and push.
+Captured the as-submitted SREday abstract and bio under `abstract/`.
+README defers to `abstract/abstract.md` as canonical instead of
+paraphrasing. Submission's "organizers only" speaker notes captured
+locally but gitignored from the public repo. Pytest suite green
+(29 tests).
 
 ## Next step
 
-Two inputs from Michael are blocking further work; chase them in this
-order.
+With the abstract captured, the next blocking inputs shift one notch
+down. Chase in this order.
 
-1. **Primary — submitted abstract and bio text.** This blocks talk
-   content. Once received, create `abstract/abstract.md` and
-   `abstract/bio.md` and lift the paraphrased summary out of the README.
-2. **Secondary — event date, timebox, and room.** This blocks only the
-   README placeholders and any timing-dependent outline decisions.
-   When SREday publishes the schedule, fill in the README "Event
-   Details" section.
+1. **Primary — event date, timebox, and room.** Blocks the README
+   placeholders, the SREday-tuned outline, and any timing-dependent
+   deck decisions. Once SREday publishes the schedule, fill in the
+   README "Event Details" section and revisit the deck timing.
+2. **Secondary — draft the SREday-tuned outline in `outline/`.** The
+   abstract is in hand, so the outline work is no longer blocked on
+   external inputs (only on having the timebox to plan against).
+   Emphasis: blast-radius, reversibility, operational controls.
 
 ## Branch and test status
 
@@ -102,5 +107,3 @@ order.
 ## Known unverified items
 
 - Event date, timebox, and room — marked TBD in README.
-- As-submitted abstract text — README uses a paraphrased summary
-  until Michael supplies the exact submitted copy.

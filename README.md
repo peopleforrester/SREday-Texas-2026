@@ -6,19 +6,15 @@ Venue-specific materials for the talk at **SREday Austin / Texas 2026**.
 
 ## Talk Summary
 
-In late 2025, a Claude Code agent was given direct, unguarded access to a
-nine-node production homelab Kubernetes cluster. It deleted the cluster.
+I gave Claude Code full Kubernetes cluster access and told it to fix
+a networking issue. Forty minutes later the cluster was gone — etcd
+force-overridden, netplan deleted across every control plane node,
+no gate stopping any of it. The talk is the full incident, then the
+**Eight Guardrails Framework** I built over the next six months to
+let agents operate fast inside a boundary they can't break out of.
 
-This talk walks through the session transcripts: the prompt that started
-it, the failure chain that let a single tool call cascade into cluster
-destruction, and the **Eight Guardrails Framework** that would have
-stopped it at any of several points. The content is built from actual
-JSONL session data, not reconstructions — every destructive command in
-the narrative is a real one pulled from the transcript.
-
-The SREday version is tuned for an SRE audience: the emphasis is on
-blast-radius management, reversibility, and the operational controls
-that make AI-agent-driven infrastructure safe to run in production.
+The canonical text is in [abstract/abstract.md](abstract/abstract.md).
+The README defers to it rather than carrying its own paraphrase.
 
 ## Related Repositories
 
@@ -44,6 +40,7 @@ are created as content lands, not as empty placeholders.
 - `PROJECT_STATE.md` — durable state for `/continue` across sessions
 - `LICENSE` — license terms (CC BY 4.0)
 - `pyproject.toml`, `uv.lock` — Python project config (used by the test suite)
+- `abstract/` — as-submitted abstract and bio (canonical text)
 - `docs/` — plans and supporting documents for repo work
 - `tests/` — consistency suite asserting durable-state files match reality
 
@@ -52,7 +49,6 @@ are created as content lands, not as empty placeholders.
 Directories planned but not yet created. They will appear here as
 content for them is produced.
 
-- `abstract/` — as-submitted abstract, bio, session metadata
 - `outline/` — SREday-tuned outline and timebox plan
 - `deck/` — slides for this venue
 - `speaker-notes/` — speaker notes tuned for the SREday audience and timebox
