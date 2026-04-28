@@ -26,6 +26,8 @@ substance in `claude-deleted-my-cluster-2026`.
       (items #1, #2, #3, #4, #6 — see "Senior-review fixes" below)
 - [x] Populate `abstract/` with as-submitted SREday abstract and bio
       (organizers-only speaker notes captured locally, gitignored)
+- [x] Verify event date / venue / timebox and lift TBD from README
+      (May 11, 2026 at The Sunset Room, single track, 30-minute slot)
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
       reversibility, operational controls)
 - [ ] Import / adapt deck from `claude-deleted-my-cluster-2026` into
@@ -66,25 +68,27 @@ Deferred items (with reasons in `docs/senior-review-fixes.md`):
 
 ## Last completed step
 
-Captured the as-submitted SREday abstract and bio under `abstract/`.
-README defers to `abstract/abstract.md` as canonical instead of
-paraphrasing. Submission's "organizers only" speaker notes captured
-locally but gitignored from the public repo. Pytest suite green
-(29 tests).
+Verified SREday Austin Q2 2026 schedule against the official event
+page and lifted TBD from README "Event Details": May 11, 2026, The
+Sunset Room (310 E 3rd St, Austin, TX 78701), single track, 10am–6pm,
+30-minute slot. Pytest suite green (31 tests).
 
 ## Next step
 
-With the abstract captured, the next blocking inputs shift one notch
-down. Chase in this order.
+The two blocking external inputs (abstract, schedule) are now both
+captured. The remaining work is content authoring against a known
+30-minute single-track slot on May 11, 2026.
 
-1. **Primary — event date, timebox, and room.** Blocks the README
-   placeholders, the SREday-tuned outline, and any timing-dependent
-   deck decisions. Once SREday publishes the schedule, fill in the
-   README "Event Details" section and revisit the deck timing.
-2. **Secondary — draft the SREday-tuned outline in `outline/`.** The
-   abstract is in hand, so the outline work is no longer blocked on
-   external inputs (only on having the timebox to plan against).
-   Emphasis: blast-radius, reversibility, operational controls.
+1. **Primary — draft the SREday-tuned outline in `outline/`.** Plan
+   the 30-minute talk: ~10 minutes on the incident, ~15 on the
+   guardrails, ~5 on open questions (per the speaker's submitted
+   structure). Tune emphasis toward SRE concerns: blast-radius,
+   reversibility, operational controls.
+2. **Secondary — adapt the deck from `claude-deleted-my-cluster-2026`
+   into `deck/` once the outline is set.** The Atlanta Ignite cut
+   (April 21, 2026) is the most recent rehearsal of the substance —
+   audience reactions and timing data from that run feed directly
+   into deck choices here.
 
 ## Branch and test status
 
@@ -106,4 +110,5 @@ down. Chase in this order.
 
 ## Known unverified items
 
-- Event date, timebox, and room — marked TBD in README.
+- Specific session time on May 11 — TBA by organizers closer to the
+  event. Not blocking for outline or deck work.

@@ -11,6 +11,9 @@ For global user-level memory, see `~/.claude/projects/*/memory/`.
   but the actual login (and the only valid `gh repo create` namespace) is
   `peopleforrester`. Verify with `git remote get-url origin` rather than
   trusting any stored summary.
+- **Event page:** <https://sreday.com/2026-austin-q2/> — source of truth
+  for date, venue, format, and (eventually) the session schedule.
+- **CFP / submission page:** <https://www.papercall.io/sreday-2026-austin-q2>.
 
 ## Current work-in-progress
 
@@ -48,17 +51,18 @@ outline, deck, and speaker notes are all TBD.
 
 ## Where we left off
 
-As-submitted SREday abstract and bio captured under `abstract/`.
-README replaced its paraphrased Talk Summary with a short intro plus
-a link to `abstract/abstract.md` (canonical). Organizers-only speaker
-notes from the submission form captured locally as
-`abstract/speaker-notes-organizers.md` but gitignored — the form
-labelled them "visible to organizers only" so they stay out of the
-public repo. Pytest suite green (29 tests).
+Event date, venue, and format verified against the official page
+(<https://sreday.com/2026-austin-q2/>) and folded into the README:
+**May 11, 2026 at The Sunset Room (310 E 3rd St, Austin, TX 78701),
+single track, 30-minute slot.** TBD removed from "Event Details" and
+from "Known unverified items". Pytest suite green (31 tests).
 
-Next blocking input is the event date, timebox, and room (was
-secondary, now primary). The outline draft can begin once the
-timebox is known. See `PROJECT_STATE.md` "Next step".
+Both external blocking inputs (abstract, schedule) are now closed.
+Next work is content authoring: SREday-tuned outline in `outline/`,
+then deck adaptation in `deck/`. The April 21, 2026 DevOpsDays
+Atlanta Ignite cut is the most recent rehearsal of the substance —
+post-event observations from that run should inform deck choices
+here. See `PROJECT_STATE.md` "Next step".
 
 ## What is verified vs. asserted
 

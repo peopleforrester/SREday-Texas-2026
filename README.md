@@ -69,10 +69,14 @@ content for them is produced.
 
 ## Event Details
 
-- **Event:** SREday (Texas / Austin edition)
-- **Year:** 2026
+- **Event:** SREday Austin Q2 2026
+- **Date:** May 11, 2026
+- **Hours:** 10:00 AM – 6:00 PM (single track)
+- **Venue:** The Sunset Room, 310 E 3rd St, Austin, TX 78701
+- **Format:** single track, ~10+ speakers, 30-minute slots
+- **My slot:** 30 minutes (specific session time TBA by organizers)
 - **Status:** Accepted
-- **Date, timebox, and room:** _TBD — fill in once the schedule drops_
+- **Source:** <https://sreday.com/2026-austin-q2/> (verified 2026-04-28)
 
 ## License
 
