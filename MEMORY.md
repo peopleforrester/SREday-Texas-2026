@@ -83,3 +83,22 @@ Senior-review fixes were applied via TDD: a pytest consistency suite
 was wired up first, failing tests were committed to record the red
 state, then each fix was driven to green one phase at a time with a
 commit per phase. Plan in `docs/senior-review-fixes.md`.
+
+## Rehearsal signal — DevOpsDays Atlanta Ignite (2026-04-21)
+
+The 5-minute Ignite cut at DevOpsDays Atlanta on 2026-04-21 was a
+strong rehearsal of the shared substance. Per Michael's report:
+audience laughed at almost every beat and gave a standing ovation
+at the end.
+
+Implication for the 30-minute SREday cut on 2026-05-11:
+
+- Comedic beats are validated — keep the same tone and timing in
+  the longer cut. Don't over-formalize.
+- A standing ovation off a 5-minute version means the through-line
+  works compressed; the 30-minute version's risk is energy sag in
+  the middle, not a weak premise. Pace the guardrails section
+  deliberately so it does not become a lecture.
+- The April 21 cut is the most recent live timing reference for any
+  shared material. Until a longer rehearsal exists, treat Atlanta
+  pacing data as authoritative for the segments that overlap.
