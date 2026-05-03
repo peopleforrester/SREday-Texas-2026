@@ -15,6 +15,7 @@ VERIFIED_FACTS: list[tuple[str, str]] = [
     ("city/state/zip", "Austin, TX 78701"),
     ("timebox", "30 minutes"),
     ("format", "single track"),
+    ("session time", "12:30"),
 ]
 
 
