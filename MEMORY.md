@@ -48,21 +48,27 @@ outline, deck, and speaker notes are all TBD.
   is not sensitive, but the original framing was private, so the
   conservative default is no-publish. To publish, remove the entry
   from `.gitignore` deliberately.
+- **Bio versions:** `abstract/bio.md` is the talk-page bio Michael
+  sent on 2026-05-03 (KodeKloud-affiliated, 30 years experience,
+  100K+ engineers taught, KCD Texas / KubeCon EU / KubeAuto AI Day
+  references, with the personal closing "This is for both of them.
+  This is for SRE Day"). The earlier as-submitted CFP bio is in git
+  history; check `git log -- abstract/bio.md` if anyone asks for it.
 
 ## Where we left off
 
-Event date, venue, and format verified against the official page
-(<https://sreday.com/2026-austin-q2/>) and folded into the README:
-**May 11, 2026 at The Sunset Room (310 E 3rd St, Austin, TX 78701),
-single track, 30-minute slot.** TBD removed from "Event Details" and
-from "Known unverified items". Pytest suite green (31 tests).
+Talk-page submission captured (2026-05-03): **session time 12:30 on
+May 11, 2026**, and the revised speaker bio. README surfaces the
+12:30 slot in Event Details; `abstract/bio.md` now holds the
+talk-page version of the bio (the earlier as-submitted CFP bio
+remains in git history if needed). Pytest suite green (31 tests).
 
-Both external blocking inputs (abstract, schedule) are now closed.
-Next work is content authoring: SREday-tuned outline in `outline/`,
-then deck adaptation in `deck/`. The April 21, 2026 DevOpsDays
-Atlanta Ignite cut is the most recent rehearsal of the substance —
-post-event observations from that run should inform deck choices
-here. See `PROJECT_STATE.md` "Next step".
+All external blockers (abstract, schedule, session time, bio) are
+closed. Remaining work is content authoring: SREday-tuned outline
+in `outline/`, then deck adaptation in `deck/`. The April 21, 2026
+DevOpsDays Atlanta Ignite cut is the most recent rehearsal of the
+substance — see "Rehearsal signal — DevOpsDays Atlanta Ignite" below
+for the implication for the 30-minute cut.
 
 ## What is verified vs. asserted
 

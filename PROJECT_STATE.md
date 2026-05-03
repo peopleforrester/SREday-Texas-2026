@@ -28,6 +28,8 @@ substance in `claude-deleted-my-cluster-2026`.
       (organizers-only speaker notes captured locally, gitignored)
 - [x] Verify event date / venue / timebox and lift TBD from README
       (May 11, 2026 at The Sunset Room, single track, 30-minute slot)
+- [x] Confirm session time (12:30 on May 11) and revise bio for the
+      talk page
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
       reversibility, operational controls)
 - [ ] Import / adapt deck from `claude-deleted-my-cluster-2026` into
@@ -68,10 +70,12 @@ Deferred items (with reasons in `docs/senior-review-fixes.md`):
 
 ## Last completed step
 
-Verified SREday Austin Q2 2026 schedule against the official event
-page and lifted TBD from README "Event Details": May 11, 2026, The
-Sunset Room (310 E 3rd St, Austin, TX 78701), single track, 10am–6pm,
-30-minute slot. Pytest suite green (31 tests).
+Captured the talk-page submission for the SREday slot: 12:30 PM
+session time on May 11, 2026, plus the revised speaker bio. The
+earlier as-submitted CFP bio is preserved in git history;
+`abstract/bio.md` now holds the version that goes to the talk page.
+README "Event Details" surfaces the 12:30 slot. Pytest suite green
+(31 tests).
 
 ## Next step
 
@@ -110,5 +114,6 @@ captured. The remaining work is content authoring against a known
 
 ## Known unverified items
 
-- Specific session time on May 11 — TBA by organizers closer to the
-  event. Not blocking for outline or deck work.
+_None at the moment._ All external blockers (abstract, schedule,
+session time, bio) are now closed. Remaining work is content
+authoring: outline, deck, speaker notes, rehearsal.

@@ -1,23 +1,23 @@
-# Speaker Bio — Michael R Forrester
+# Speaker Bio — Michael Forrester
 
-The as-submitted bio for SREday Austin / Texas 2026.
+Bio for the SREday Austin / Texas 2026 talk page. Revised
+2026-05-03; the original CFP-submission bio is preserved in git
+history.
 
-## Title
+## Identity
 
-Principal Training Architect at KodeKloud
-
-## Contact
-
-- Submission email: michaelrishiforrester@gmail.com
-- LinkedIn: linkedin.com/in/michaelrishiforrester
+- **Speaker:** Michael Forrester
+- **Affiliation:** KodeKloud
+- **Submission email:** michaelrishiforrester@gmail.com
+- **LinkedIn:** linkedin.com/in/michaelrishiforrester
 
 ## Bio
 
-Michael Forrester is a Principal Training Architect at KodeKloud, a
-CNCF Training Partner serving 1M+ learners. He teaches platform
-engineering, Kubernetes, and AI/ML infrastructure, drawing on 30
-years of infrastructure experience and production deployments of
-ArgoCD and Falco in federal environments. He holds 12 AWS
-certifications and multiple CNCF and NVIDIA certifications. When he's
-not optimizing platform engineering, he's arguing with AI about
-cluster perms and explaining AI-enhanced DevOps to family.
+Principal Training Architect with 30 years of infrastructure
+experience across federal, Fortune 50, and startup environments.
+Has personally taught over 100,000 engineers platform engineering
+and AI/ML infrastructure. Workshop ranked third most-selected at
+KCD Texas 2026. Speaker at KubeCon EU Cloud Native University and
+KubeAuto AI Day Europe, Amsterdam. The cluster deletion incident
+described in this talk actually happened. This is for both of them.
+This is for SRE Day

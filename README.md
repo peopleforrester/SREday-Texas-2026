@@ -74,9 +74,9 @@ content for them is produced.
 - **Hours:** 10:00 AM – 6:00 PM (single track)
 - **Venue:** The Sunset Room, 310 E 3rd St, Austin, TX 78701
 - **Format:** single track, ~10+ speakers, 30-minute slots
-- **My slot:** 30 minutes (specific session time TBA by organizers)
+- **My slot:** 12:30 (30 minutes)
 - **Status:** Accepted
-- **Source:** <https://sreday.com/2026-austin-q2/> (verified 2026-04-28)
+- **Source:** <https://sreday.com/2026-austin-q2/>
 
 ## License
 
