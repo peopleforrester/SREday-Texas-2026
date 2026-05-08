@@ -60,20 +60,21 @@ def test_deck_asset_patterns_covered(repo_root: Path, sample: str, reason: str) 
     )
 
 
-def test_pdf_export_policy_documented(readme: str) -> None:
-    """The README must document the PDF-export policy.
+def test_pdf_export_policy_documented(repo_root: Path) -> None:
+    """The PDF-export policy must be documented somewhere durable.
 
-    The senior review flagged that the prior .gitignore was ambiguous
-    about PDFs. The policy is: PDF exports are derived and ignored;
-    deck source is committed. README must say so for future contributors.
+    The senior review flagged that the prior `.gitignore` was ambiguous
+    about PDFs. The README used to carry the policy directly but that
+    is repo-plumbing; the visitor-facing README is now policy-free and
+    the asset policy lives in CLAUDE.md alongside other contributor /
+    session instructions. The test follows the policy to its new home.
     """
-    lower = readme.lower()
-    assert "asset policy" in lower or "pdf" in lower, (
-        "README does not mention PDFs or an 'Asset policy' section. "
-        "Document the PDF-export decision so it doesn't drift."
+    claude_md = (repo_root / "CLAUDE.md").read_text(encoding="utf-8").lower()
+    assert "asset policy" in claude_md or "pdf" in claude_md, (
+        "CLAUDE.md does not mention PDFs or an 'Asset policy' section. "
+        "Document the PDF-export decision so it does not drift."
     )
-    # The decision itself must be captured — look for the actual ruling.
-    assert "derived" in lower or "ignored" in lower or "not committed" in lower, (
-        "README mentions PDF but does not state the policy "
+    assert "derived" in claude_md or "ignored" in claude_md or "not committed" in claude_md, (
+        "CLAUDE.md mentions PDF but does not state the policy "
         "(derived / ignored / not committed)."
     )

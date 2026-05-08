@@ -44,3 +44,17 @@ def test_readme_does_not_advertise_tbd_event_details(readme: str) -> None:
         "README still says 'Date, timebox, and room: TBD'. The SREday "
         "Austin Q2 2026 schedule is verified — fill it in."
     )
+
+
+def test_readme_links_to_event_page(readme: str) -> None:
+    """README must link to the official SREday event page.
+
+    Visitors arriving at the GitHub repo should be able to jump
+    straight to the conference page in one click. Source of truth
+    for date / venue / schedule lives there, not here.
+    """
+    assert "sreday.com/2026-austin-q2" in readme, (
+        "README does not link to the SREday event page "
+        "(https://sreday.com/2026-austin-q2/). A visitor-facing talk "
+        "repo should make the conference one click away."
+    )
