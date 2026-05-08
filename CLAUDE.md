@@ -30,6 +30,29 @@ When you make a change here that would also apply to those venues
 (e.g., a factual correction from the forensic data), flag it so the
 change can be propagated — don't silently fork the story.
 
+## Framework evolution — `agentic-covenants`
+
+The next evolution of the framework — beyond the Eight Guardrails —
+lives in `~/repos/events/agentic-covenants` (private:
+<https://github.com/peopleforrester/agentic-covenants>). It already
+has substance: `MATRIX.md`, `matrix.yaml`, `BYPASSES.md`,
+`CITATIONS.md`, and `docs/`.
+
+**Contract for this repo and this talk.** The submitted-and-accepted
+SREday abstract names "Eight Guardrails Framework" explicitly, so
+the main-stage framework on May 11 is the eight guardrails — full
+stop. Renaming, renumbering, or replacing them would be a
+bait-and-switch on attendees who came for what the abstract
+promised.
+
+**Where the covenants material can show up.** The submitted
+structure ends with "5 minutes on what I still don't have a good
+answer for." That closing is the right place to gesture at the
+covenants direction as the next evolution — at that level of
+fidelity (a pointer, not a parallel framework). Anything heavier
+goes in a follow-on talk or a venue whose abstract was scoped to
+the evolution, not this one.
+
 ## Workflow in this repo
 
 - Branch rule: work on `staging`, merge to `main` after verification.

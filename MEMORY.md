@@ -14,6 +14,12 @@ For global user-level memory, see `~/.claude/projects/*/memory/`.
 - **Event page:** <https://sreday.com/2026-austin-q2/> — source of truth
   for date, venue, format, and (eventually) the session schedule.
 - **CFP / submission page:** <https://www.papercall.io/sreday-2026-austin-q2>.
+- **Framework evolution:** `~/repos/events/agentic-covenants`
+  (private: <https://github.com/peopleforrester/agentic-covenants>).
+  The next evolution of the framework beyond the Eight Guardrails.
+  See `CLAUDE.md` "Framework evolution" for the contract — the
+  SREday talk stays scoped to the eight guardrails; evolution
+  material gestures only in the closing beat.
 
 ## Current work-in-progress
 
