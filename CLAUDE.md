@@ -65,6 +65,25 @@ the evolution, not this one.
   credentials, unredacted customer data, or private financial info go
   in the analysis repo (which is private), not here.
 
+## Asset policy
+
+What goes in the repo and what does not — relocated here from the
+visitor-facing README during the polish pass.
+
+- **Deck source is committed; PDF exports are derived and not
+  committed.** Exports are regenerated from source on every build,
+  so they only pollute diffs. `.gitignore` ignores `deck/*.pdf` and
+  `outline/*.pdf`.
+- **Publishable PDFs** (e.g. a slides-as-delivered handout) belong
+  in `post-event/`, which is not blanket-ignored.
+- **Rehearsal recordings** (`*.wav`, `*.m4a`, etc.) are gitignored —
+  they are local-only artifacts and not appropriate for a public repo.
+- **Session transcripts with real credentials, unredacted customer
+  data, or private financial info** belong in the private analysis
+  repo (`events/claude-deleted-my-cluster-2026`), never here. (Same
+  rule as "Public repo" above; restated here next to the other asset
+  decisions so it stays one mental category.)
+
 ## When working on deck / outline / speaker-notes
 
 - The SREday audience is SRE-leaning. Tune emphasis toward

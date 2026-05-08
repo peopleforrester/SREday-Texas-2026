@@ -7,14 +7,31 @@ import re
 from pathlib import Path
 
 
-_LAYOUT_HEADING = re.compile(r"^##\s+Repository Layout\s*$", re.MULTILINE)
+# Several heading wordings are acceptable for the section that lists
+# what is on disk. The test does not care about the wording — only
+# that whatever section plays that role lists directories that exist.
+_LAYOUT_HEADINGS = (
+    "Repository Layout",
+    "Repository contents",
+    "What's in this repo",
+    "What's in this repository",
+)
+_LAYOUT_HEADING = re.compile(
+    r"^##\s+(?:" + "|".join(re.escape(h) for h in _LAYOUT_HEADINGS) + r")\s*$",
+    re.MULTILINE,
+)
 _NEXT_HEADING = re.compile(r"^##\s+", re.MULTILINE)
-# Match `- `path/`` or `- ``path/`` (backtick-wrapped) on a list line.
-_DIR_ENTRY = re.compile(r"^[-*]\s+`([^`]+/)`")
+# Match a list line that contains a backtick-wrapped path-with-slash.
+# Allows arbitrary non-backtick prefix between the bullet and the
+# backtick so markdown link / bold / emoji wrappers are tolerated:
+#   - `abstract/` — caption
+#   - **`abstract/`** — caption
+#   - [**`abstract/`**](abstract/) — caption
+_DIR_ENTRY = re.compile(r"^[-*]\s+[^`\n]*`([^`]+/)`")
 
 
 def _extract_layout_section(readme: str) -> str:
-    """Return the body of the '## Repository Layout' H2 section, or ''."""
+    """Return the body of the layout H2 section, or '' if not present."""
     m = _LAYOUT_HEADING.search(readme)
     if not m:
         return ""
@@ -31,7 +48,10 @@ def test_layout_dirs_exist_or_are_in_roadmap(repo_root: Path, readme: str) -> No
     similarly-named) section so a first-time reader is not misled.
     """
     section = _extract_layout_section(readme)
-    assert section, "README is missing a '## Repository Layout' section."
+    assert section, (
+        "README is missing the layout section. Expected one of these "
+        f"H2 headings: {_LAYOUT_HEADINGS}."
+    )
 
     listed_dirs: list[str] = []
     for line in section.splitlines():
