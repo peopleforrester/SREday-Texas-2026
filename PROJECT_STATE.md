@@ -30,6 +30,9 @@ substance in `claude-deleted-my-cluster-2026`.
       (May 11, 2026 at The Sunset Room, single track, 30-minute slot)
 - [x] Confirm session time (12:30 on May 11) and revise bio for the
       talk page
+- [x] Polish the public-facing repo: visitor-focused README,
+      GitHub description / topics / homepage URL, asset policy
+      relocated to CLAUDE.md
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
       reversibility, operational controls)
 - [ ] Import / adapt deck from `claude-deleted-my-cluster-2026` into
@@ -70,12 +73,16 @@ Deferred items (with reasons in `docs/senior-review-fixes.md`):
 
 ## Last completed step
 
-Captured the talk-page submission for the SREday slot: 12:30 PM
-session time on May 11, 2026, plus the revised speaker bio. The
-earlier as-submitted CFP bio is preserved in git history;
-`abstract/bio.md` now holds the version that goes to the talk page.
-README "Event Details" surfaces the 12:30 slot. Pytest suite green
-(31 tests).
+Polish pass on the public-facing repo. README rewritten around the
+three audiences who actually land on the GitHub page (talk attendees,
+post-event watchers, googling practitioners): strong lead, When/Where
+callout above the fold, three-bullet "what you'll walk away with"
+lifted from the abstract themes, links to abstract/bio/license, and
+a citation block. Asset policy moved out of README into CLAUDE.md
+where contributor instructions already live. GitHub repo metadata
+set: description, homepage URL pointing at the SREday event page,
+and topics (sreday, sre, kubernetes, ai-agents, ai-safety,
+claude-code, devops, conference-talk). Pytest suite green (32 tests).
 
 ## Next step
 

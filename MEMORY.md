@@ -60,6 +60,12 @@ outline, deck, and speaker notes are all TBD.
   references, with the personal closing "This is for both of them.
   This is for SRE Day"). The earlier as-submitted CFP bio is in git
   history; check `git log -- abstract/bio.md` if anyone asks for it.
+- **README is visitor-facing.** Anything that is repo-plumbing
+  (asset policy, branch workflow, contributor conventions, etc.)
+  lives in CLAUDE.md or PROJECT_STATE.md, not in README. The README
+  is for the three audiences a talk repo actually serves: attendees
+  before the talk, watchers after the talk, practitioners googling
+  the topic.
 
 ## Where we left off
 
