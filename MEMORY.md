@@ -69,11 +69,17 @@ outline, deck, and speaker notes are all TBD.
 
 ## Where we left off
 
-Talk-page submission captured (2026-05-03): **session time 12:30 on
-May 11, 2026**, and the revised speaker bio. README surfaces the
-12:30 slot in Event Details; `abstract/bio.md` now holds the
-talk-page version of the bio (the earlier as-submitted CFP bio
-remains in git history if needed). Pytest suite green (31 tests).
+Polish pass on the public-facing repo (2026-05-03). README rewritten
+around the three audiences a talk repo actually serves (attendees,
+post-event watchers, practitioners googling the topic). When/Where
+callout sits above the fold; abstract themes lift into a "what you'll
+walk away with" preview; speaker bio link, citation block, and CC BY
+4.0 reference live below. Asset policy moved out of the visitor
+README into CLAUDE.md where contributor instructions live. GitHub
+repo metadata set: description, homepage URL
+(<https://sreday.com/2026-austin-q2/>), and topics (sreday, sre,
+kubernetes, ai-agents, ai-safety, claude-code, devops,
+conference-talk). Pytest suite green (32 tests).
 
 All external blockers (abstract, schedule, session time, bio) are
 closed. Remaining work is content authoring: SREday-tuned outline
