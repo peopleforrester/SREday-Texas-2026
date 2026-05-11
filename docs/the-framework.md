@@ -7,6 +7,32 @@ artifact. The structure is the speaker's; the bypass material is
 added here so the reference is honest about what each layer does
 and does not catch.
 
+## The Eight Guardrails
+
+The talk's named framework. Deck slide 17 (Level 5 :: The Eight)
+lists them; the abstract calls out "Eight Guardrails Framework"
+explicitly. Each guardrail is a principle. The four-layer mental
+model below is **how the principles get enforced** in practice —
+think of the eight as the *what*, and the four layers as the *where*.
+
+| # | Guardrail | Primarily enforced at | Concrete artifacts in this repo |
+|---|---|---|---|
+| 1 | **Treat agent as untrusted workload** | Principle — pervades all four layers | `docs/the-framework.md` (this doc), `hooks/README.md` |
+| 2 | **Sandbox by default** | Agent / host | None in this repo (host sandbox is a deck-acknowledged gap); see slide 19 for "OS-level isolation is currently the strongest line" |
+| 3 | **Never give agent your permissions** | Server / target | Not enforced via repo artifacts — server-side RBAC and IAM scope; see the "Identity" and "Authorization" rows of the bypass matrix below |
+| 4 | **Tiered approval** | Client + server | `hooks/git/pre-commit` (T1), `hooks/git/pre-push` (T2 secret-scan + units, T3 e2e on main) |
+| 5 | **Cluster-level policy** | Server / target | Not enforced via repo artifacts — Kyverno / OPA admission policies on the target cluster |
+| 6 | **IaC behind a gate** | Server / git+ci | `workflows/ci.yml` and `workflows/e2e.yml` (plan-and-apply split lives in the IaC pipeline, not here) |
+| 7 | **Audit the MCP attack surface** | Agent / framework | `hooks/claude-code/block-sensitive-files.sh` (operator-owned deny-list); MCP server allowlist lives in `~/.claude/settings.json` per operator |
+| 8 | **Monitor agents like production** | Cross-cutting (Detect / Respond) | `hooks/claude-code/harvest-journal.sh` (session capture for retrospective); production Detect / Respond / Recover live in separate matrices |
+
+Slide 18 calls out **#3 and the identity-half of #1** as "the two
+most-skipped — where the headlines come from." Pull your audit log
+on Tuesday: *who's the actor, what's the scope.*
+
+The rest of this document is the four-layer enforcement model —
+how the eight above get made real in code and policy.
+
 ## Mental model
 
 Four layers, top to bottom:
