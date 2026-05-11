@@ -37,11 +37,18 @@ The full as-submitted abstract is in
 
 ## Just saw the talk?
 
-Start at [**`docs/the-framework.md`**](docs/the-framework.md) — the
-four-layer mental model from the slides, with the **bypass column
-filled in** for every enforcement artifact. Eight Claude Code
-lifecycle hooks, two git hooks, two GitHub Actions workflows, one
-systemd timer; what each one catches, and what gets past it.
+Two entry points, depending on what you want:
+
+- **Understand the framework** → [**`docs/the-framework.md`**](docs/the-framework.md).
+  The four-layer mental model from the slides, with the **bypass
+  column filled in** for every enforcement artifact. Eight Claude
+  Code lifecycle hooks, two git hooks, two GitHub Actions workflows,
+  one systemd timer; what each one catches, and what gets past it.
+- **Install this on your own machine** → [**`hooks/README.md`**](hooks/README.md).
+  Copy-paste-ready scripts: the eight lifecycle hooks for
+  `~/.claude/hooks/`, the pre-commit and pre-push hooks for your
+  repo's `.git/hooks/`, plus the GitHub Actions workflow in
+  [`workflows/`](workflows/) as the defense-in-depth backstop.
 
 ## What's in this repo
 
@@ -49,6 +56,11 @@ systemd timer; what each one catches, and what gets past it.
   speaker bio (canonical text for the talk).
 - [**`presentations/`**](presentations/) — slide decks (PPTX,
   Keynote, or Markdown source).
+- [**`hooks/`**](hooks/) — the actual enforcement artifacts from the
+  talk: Claude Code lifecycle hooks and tiered git hooks, with a
+  `README.md` covering install, what each one does, and what
+  bypasses it.
+- [**`workflows/`**](workflows/) — GitHub Actions backstop (`ci.yml`).
 - [**`docs/`**](docs/) — the framework reference and supporting
   documents.
 - [**`tests/`**](tests/) — a small consistency suite that asserts the
