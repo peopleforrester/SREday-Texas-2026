@@ -54,12 +54,15 @@ outline, deck, and speaker notes are all TBD.
   is not sensitive, but the original framing was private, so the
   conservative default is no-publish. To publish, remove the entry
   from `.gitignore` deliberately.
-- **Bio versions:** `abstract/bio.md` is the talk-page bio Michael
-  sent on 2026-05-03 (KodeKloud-affiliated, 30 years experience,
-  100K+ engineers taught, KCD Texas / KubeCon EU / KubeAuto AI Day
-  references, with the personal closing "This is for both of them.
-  This is for SRE Day"). The earlier as-submitted CFP bio is in git
-  history; check `git log -- abstract/bio.md` if anyone asks for it.
+- **Bio and affiliation history:** Three bio versions live in git:
+  (1) original CFP-submission bio — KodeKloud, Principal Training
+  Architect. (2) Talk-page submission 2026-05-03 — KodeKloud header,
+  Principal Training Architect. (3) Current 2026-05-11 —
+  **AI Workforce Transformation Specialist at Accenture.** Michael
+  left KodeKloud for Accenture between CFP acceptance and the talk
+  date; the deck title slide names the new affiliation. The repo
+  was updated to match on the day of the talk. Earlier bios remain
+  in git history; check `git log -- abstract/bio.md`.
 - **README is visitor-facing.** Anything that is repo-plumbing
   (asset policy, branch workflow, contributor conventions, etc.)
   lives in CLAUDE.md or PROJECT_STATE.md, not in README. The README

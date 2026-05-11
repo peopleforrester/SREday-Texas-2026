@@ -61,11 +61,12 @@ follow-ups will land in `post-event/`.
 
 ## Speaker
 
-**Michael Forrester** — Principal Training Architect at KodeKloud.
-30 years of infrastructure experience across federal, Fortune 50, and
-startup environments. Has personally taught over 100,000 engineers
-platform engineering and AI/ML infrastructure. Speaker at KubeCon EU
-Cloud Native University and KubeAuto AI Day Europe.
+**Michael Forrester** — AI Workforce Transformation Specialist at
+Accenture. 30 years of infrastructure experience across federal,
+Fortune 50, and startup environments. Has personally taught over
+100,000 engineers platform engineering and AI/ML infrastructure.
+Speaker at KubeCon EU Cloud Native University and KubeAuto AI Day
+Europe.
 
 Full bio: [**`abstract/bio.md`**](abstract/bio.md).
 Contact: [michael@performantpro.com](mailto:michael@performantpro.com).
