@@ -60,8 +60,9 @@ build/
 *.mp4
 *.mov
 
-# PDF policy: exports are derived, so ignore them under deck/ and
-# outline/. If a publishable PDF deliverable is produced for a venue,
-# add it under post-event/ where it is not blanket-ignored.
-deck/*.pdf
+# PDF policy: exports are derived, so ignore them under
+# presentations/ and outline/. If a publishable PDF deliverable is
+# produced for a venue, add it under post-event/ where it is not
+# blanket-ignored.
+presentations/*.pdf
 outline/*.pdf

@@ -70,10 +70,11 @@ the evolution, not this one.
 What goes in the repo and what does not — relocated here from the
 visitor-facing README during the polish pass.
 
-- **Deck source is committed; PDF exports are derived and not
-  committed.** Exports are regenerated from source on every build,
-  so they only pollute diffs. `.gitignore` ignores `deck/*.pdf` and
-  `outline/*.pdf`.
+- **Presentation source is committed; PDF exports are derived and
+  not committed.** Exports are regenerated from source on every build,
+  so they only pollute diffs. `.gitignore` ignores `presentations/*.pdf`
+  and `outline/*.pdf`. PPTX, Keynote, and Markdown deck source all
+  live in `presentations/`.
 - **Publishable PDFs** (e.g. a slides-as-delivered handout) belong
   in `post-event/`, which is not blanket-ignored.
 - **Rehearsal recordings** (`*.wav`, `*.m4a`, etc.) are gitignored —

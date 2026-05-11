@@ -35,11 +35,22 @@ to let agents operate fast inside a boundary they can't break out of.
 The full as-submitted abstract is in
 [**`abstract/abstract.md`**](abstract/abstract.md).
 
+## Just saw the talk?
+
+Start at [**`docs/the-framework.md`**](docs/the-framework.md) — the
+four-layer mental model from the slides, with the **bypass column
+filled in** for every enforcement artifact. Eight Claude Code
+lifecycle hooks, two git hooks, two GitHub Actions workflows, one
+systemd timer; what each one catches, and what gets past it.
+
 ## What's in this repo
 
 - [**`abstract/`**](abstract/) — the as-submitted talk abstract and
   speaker bio (canonical text for the talk).
-- [**`docs/`**](docs/) — plans and supporting documents for repo work.
+- [**`presentations/`**](presentations/) — slide decks (PPTX,
+  Keynote, or Markdown source).
+- [**`docs/`**](docs/) — the framework reference and supporting
+  documents.
 - [**`tests/`**](tests/) — a small consistency suite that asserts the
   durable-state files in this repo match reality (event date matches
   the conference page, GitHub owner matches `git remote`, README
