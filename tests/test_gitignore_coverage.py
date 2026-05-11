@@ -15,21 +15,21 @@ DECK_ASSET_SAMPLES: list[tuple[str, str]] = [
     ("dist/index.html", "generic frontend build output"),
     ("build/foo.html", "generic build output"),
     (".reveal-md/cache.json", "reveal-md cache directory"),
-    ("deck/~$slides.pptx", "PowerPoint lock file"),
-    ("deck/~$slides.key", "Keynote lock file"),
-    ("deck/slides.pptx~", "PowerPoint autosave"),
-    ("deck/main.aux", "LaTeX auxiliary"),
-    ("deck/main.log", "LaTeX log"),
-    ("deck/main.toc", "LaTeX table of contents"),
-    ("deck/main.nav", "Beamer nav"),
-    ("deck/main.snm", "Beamer snm"),
-    ("deck/main.out", "LaTeX hyperref out"),
-    ("deck/main.synctex.gz", "LaTeX synctex"),
+    ("presentations/~$slides.pptx", "PowerPoint lock file"),
+    ("presentations/~$slides.key", "Keynote lock file"),
+    ("presentations/slides.pptx~", "PowerPoint autosave"),
+    ("presentations/main.aux", "LaTeX auxiliary"),
+    ("presentations/main.log", "LaTeX log"),
+    ("presentations/main.toc", "LaTeX table of contents"),
+    ("presentations/main.nav", "Beamer nav"),
+    ("presentations/main.snm", "Beamer snm"),
+    ("presentations/main.out", "LaTeX hyperref out"),
+    ("presentations/main.synctex.gz", "LaTeX synctex"),
     ("rehearsal/dryrun.wav", "rehearsal recording"),
     ("rehearsal/dryrun.m4a", "rehearsal recording"),
     ("rehearsal/dryrun.aif", "rehearsal recording"),
     ("rehearsal/dryrun.aiff", "rehearsal recording"),
-    ("deck/slides.pdf", "PDF export of the deck (derived artifact)"),
+    ("presentations/slides.pdf", "PDF export of the deck (derived artifact)"),
 ]
 
 
@@ -53,7 +53,7 @@ def _git_check_ignore(repo_root: Path, sample_path: str) -> bool:
     ids=[s for s, _ in DECK_ASSET_SAMPLES],
 )
 def test_deck_asset_patterns_covered(repo_root: Path, sample: str, reason: str) -> None:
-    """Each predictable deck/talk asset path must be ignored."""
+    """Each predictable presentations/talk asset path must be ignored."""
     assert _git_check_ignore(repo_root, sample), (
         f".gitignore does not cover '{sample}' ({reason}). "
         "Add a pattern that catches it."
