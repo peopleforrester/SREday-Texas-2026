@@ -21,11 +21,6 @@ def project_state(repo_root: Path) -> str:
 
 
 @pytest.fixture(scope="session")
-def memory_md(repo_root: Path) -> str:
-    return (repo_root / "MEMORY.md").read_text(encoding="utf-8")
-
-
-@pytest.fixture(scope="session")
 def readme(repo_root: Path) -> str:
     return (repo_root / "README.md").read_text(encoding="utf-8")
 

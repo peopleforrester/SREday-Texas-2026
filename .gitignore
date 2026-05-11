@@ -29,6 +29,16 @@ drafts-local/
 # not published. Remove this line deliberately to publish.
 abstract/speaker-notes-organizers.md
 
+# Internal session/state narrative — useful for local Claude Code
+# sessions (state-persistence rule), noise for students reading the
+# published repo. The files stay on disk; just not pushed.
+MEMORY.md
+docs/senior-review-fixes.md
+
+# Per-project Claude Code state directory (caches, transient state).
+# Not for publication.
+.claude/
+
 # Slide-tool intermediates (commit source, ignore derived output)
 .reveal-md/
 _site/

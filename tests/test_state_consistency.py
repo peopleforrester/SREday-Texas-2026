@@ -28,14 +28,16 @@ def test_project_state_owner_matches_remote(
     )
 
 
-def test_next_step_names_both_unknowns(project_state: str) -> None:
-    """The 'Next step' section must call out both blocking inputs.
+def test_next_step_section_has_content(project_state: str) -> None:
+    """The 'Next step' section must exist and carry non-trivial content.
 
-    The senior review noted the prior 'Next step' only mentioned the
-    abstract/bio. Schedule details (date, timebox) are equally blocking
-    for the README placeholders, so both must be named explicitly.
+    Originally this test asserted that 'Next step' named both blocking
+    inputs (abstract/bio and event date/timebox). Both inputs landed
+    before the talk, so the specific-keyword assertion no longer
+    applies. The general consistency guarantee remains: PROJECT_STATE.md
+    must always answer 'what's next?' for a future /continue session,
+    so the section must be present and substantive.
     """
-    # Find the "## Next step" section and read until the next heading.
     lower = project_state.lower()
     marker = "## next step"
     start = lower.find(marker)
@@ -44,16 +46,8 @@ def test_next_step_names_both_unknowns(project_state: str) -> None:
     # Section runs to the next H2 (or EOF).
     rest = project_state[start + len(marker) :]
     next_h2 = rest.find("\n## ")
-    section = rest if next_h2 == -1 else rest[:next_h2]
-    section_lower = section.lower()
-
-    assert "abstract" in section_lower, (
-        "Next step section must reference the submitted abstract "
-        "(blocking input #1 for talk content)."
-    )
-    schedule_terms = ("date", "timebox", "schedule")
-    assert any(term in section_lower for term in schedule_terms), (
-        "Next step section must reference event date / timebox / schedule "
-        "(blocking input #2 for README placeholders). Looked for any of: "
-        f"{schedule_terms}."
+    section = rest[:next_h2] if next_h2 != -1 else rest
+    assert len(section.strip()) >= 40, (
+        "Next step section is empty or near-empty. /continue cannot "
+        "resume from a placeholder."
     )

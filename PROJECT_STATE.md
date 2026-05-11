@@ -22,8 +22,7 @@ substance in `claude-deleted-my-cluster-2026`.
 - [x] Commit scaffold to `staging`
 - [x] Create public GitHub repo `peopleforrester/SREday-Texas-2026`
 - [x] Push `staging`, then fast-forward `main` and push
-- [x] Apply senior-review fixes per `docs/senior-review-fixes.md`
-      (items #1, #2, #3, #4, #6 — see "Senior-review fixes" below)
+- [x] Apply senior-review fixes (TDD remediation series)
 - [x] Populate `abstract/` with as-submitted SREday abstract and bio
       (organizers-only speaker notes captured locally, gitignored)
 - [x] Verify event date / venue / timebox and lift TBD from README
@@ -35,71 +34,25 @@ substance in `claude-deleted-my-cluster-2026`.
       relocated to CLAUDE.md
 - [ ] Draft SREday-tuned outline in `outline/` (emphasis: blast-radius,
       reversibility, operational controls)
-- [ ] Import / adapt deck from `claude-deleted-my-cluster-2026` into
-      `deck/` once the SREday timebox is known
+- [x] Adapt deck into `presentations/` (PPTX in place)
 - [ ] Write speaker notes in `speaker-notes/`
 - [ ] Rehearse and capture timing notes
 
-## Senior-review fixes
-
-Applied via TDD on `staging` per `docs/senior-review-fixes.md`. Each
-item below has at least one consistency test in `tests/` that asserts
-the durable state matches reality.
-
-- [x] #1 Owner drift in `PROJECT_STATE.md` — corrected to
-      `peopleforrester/SREday-Texas-2026`; canonical remote URL added
-      to `MEMORY.md`. Test: `test_project_state_owner_matches_remote`.
-- [x] #2 Stale "Next step" framing — rewritten with explicit
-      primary/secondary ordering. Test:
-      `test_next_step_names_both_unknowns`.
-- [x] #3 `.gitignore` extended for slide-tool intermediates, Office /
-      Keynote lock files, LaTeX/Beamer artifacts, rehearsal audio,
-      and a scoped PDF-export ignore. PDF policy documented in
-      README. Tests: `test_deck_asset_patterns_covered` (parametrized),
-      `test_pdf_export_policy_documented`.
-- [x] #4 README "Repository Layout" split into Layout (present today)
-      and Roadmap (planned). Test: `test_layout_dirs_exist_or_are_in_roadmap`.
-- [x] #6 LICENSE added (CC BY 4.0); README references it. Tests:
-      `test_license_file_present`, `test_readme_references_license`.
-
-Deferred items (with reasons in `docs/senior-review-fixes.md`):
-
-- #5 cross-repo sibling-drift script — premature; no shared content
-  to diff yet.
-- #7 `CITATION.cff` — premature for a scaffold.
-- #8 MEMORY.md path reference — verified valid during planning, no
-  fix needed.
-- #9 public email address — speaker's call, not a defect.
-
 ## Last completed step
 
-Polish pass on the public-facing repo. README rewritten around the
-three audiences who actually land on the GitHub page (talk attendees,
-post-event watchers, googling practitioners): strong lead, When/Where
-callout above the fold, three-bullet "what you'll walk away with"
-lifted from the abstract themes, links to abstract/bio/license, and
-a citation block. Asset policy moved out of README into CLAUDE.md
-where contributor instructions already live. GitHub repo metadata
-set: description, homepage URL pointing at the SREday event page,
-and topics (sreday, sre, kubernetes, ai-agents, ai-safety,
-claude-code, devops, conference-talk). Pytest suite green (32 tests).
+Pre-show cleanup: removed internal-process files (MEMORY.md,
+historical TDD plan) from git tracking so the published repo reads
+cleanly for students arriving from slide 20. Email contact updated
+from the prior `performantpro.com` address to the gmail and Accenture
+addresses. Pytest suite green (32 tests).
 
 ## Next step
 
-The two blocking external inputs (abstract, schedule) are now both
-captured. The remaining work is content authoring against a known
-30-minute single-track slot on May 11, 2026.
-
-1. **Primary — draft the SREday-tuned outline in `outline/`.** Plan
-   the 30-minute talk: ~10 minutes on the incident, ~15 on the
-   guardrails, ~5 on open questions (per the speaker's submitted
-   structure). Tune emphasis toward SRE concerns: blast-radius,
-   reversibility, operational controls.
-2. **Secondary — adapt the deck from `claude-deleted-my-cluster-2026`
-   into `deck/` once the outline is set.** The Atlanta Ignite cut
-   (April 21, 2026) is the most recent rehearsal of the substance —
-   audience reactions and timing data from that run feed directly
-   into deck choices here.
+After the talk, capture in `post-event/`:
+- Recording link once SREday publishes
+- Slides-as-delivered PDF if shared with attendees
+- Audience reaction notes, Q&A surprises, anything worth folding
+  back into the analysis repo
 
 ## Branch and test status
 

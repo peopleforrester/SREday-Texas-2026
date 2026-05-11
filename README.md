@@ -81,7 +81,8 @@ Speaker at KubeCon EU Cloud Native University and KubeAuto AI Day
 Europe.
 
 Full bio: [**`abstract/bio.md`**](abstract/bio.md).
-Contact: [michael@performantpro.com](mailto:michael@performantpro.com).
+Contact: [michaelrishiforrester@gmail.com](mailto:michaelrishiforrester@gmail.com)
+· [michael.r.forrester@accenture.com](mailto:michael.r.forrester@accenture.com)
 
 ## License
 
