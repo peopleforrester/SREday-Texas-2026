@@ -5,6 +5,12 @@
 A 30-minute talk by **Michael Forrester** at
 [**SREday Austin Q2 2026**](https://sreday.com/2026-austin-q2/).
 
+> **The material now lives in a canonical repo.**
+> This repo stays as the record of the SREday Austin delivery. The talk's
+> evidence, the Eight Guardrails Framework, the incident forensics, and the
+> current deck are maintained at
+> [**the-day-claude-code-deleted-my-cluster**](https://github.com/peopleforrester/the-day-claude-code-deleted-my-cluster).
+
 I gave Claude Code full Kubernetes cluster access and told it to fix
 a networking issue. Forty minutes later the cluster was gone — etcd
 force-overridden, netplan deleted across every control plane node,
